@@ -37,7 +37,7 @@ function quelleConvert(quelConvert){
     var message = "Le résultat est " 
     var result = 0
     if (quelConvert == "p/m"){
-        
+        // ça ne marche pas non plus..
         alert(message += convertPieds().toString);
         
     }
