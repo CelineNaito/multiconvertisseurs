@@ -1,20 +1,23 @@
 // écrire les différentes fonctions de conversion
 
 function convertPieds(pieds){
-    pieds= prompt("Entrez une valeur en pieds: ");
-    return pieds/ 3.28 ;
+    var pieds= prompt("Entrez une valeur en pieds: ");
+    var result = pieds/ 3.28 ;
+    return result;
     
 }
 
 function convertMiles(miles){
-    miles= prompt("Entrez une valeur en miles: ");
-    return miles * 1.6 ; 
+    var miles= prompt("Entrez une valeur en miles: ");
+    var result= miles * 1.6 ; 
+    return result;
     
 }
 
 function convertNoeuds(noeuds){
-    noeuds= prompt("Entrez une valeur en noeuds: ");
-    return noeuds * 1.852 ;
+    var noeuds= prompt("Entrez une valeur en noeuds: ");
+    var result =noeuds * 1.852 ;
+    return result;
     
 }
 // créer un fonction pour démarrer
@@ -40,6 +43,11 @@ function quelleConvert(quelConvert){
     else if (quelConvert== "n/kmh"){
         alert(convertNoeuds());
     }
+    else {
+        console.log("Cette conversion est impossible.")
+    }
+    var message = "Le résultat est " + result.toString;
+    alert(message);
     // added start convert in the function so that you have a loop back to the beginning??
     startConvert();
 
