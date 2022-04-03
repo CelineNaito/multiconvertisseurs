@@ -18,9 +18,15 @@ function convertNoeuds(noeuds){
     
 }
 // créer un fonction pour démarrer
-function startConvert(start) {
+// attention a crééer un boolean pour avoir True
+function startConvert() {
     var start = prompt("Voulez-vous convertir une valeur? Oui/Non");
-    return start;
+    if (start == "Oui"){
+        return true;
+    }
+    else {
+        return false;
+    }
 }
 //créer une fonction pour choisir la converstion
 function quelleConvert(quelConvert){
@@ -34,14 +40,15 @@ function quelleConvert(quelConvert){
     else if (quelConvert== "n/kmh"){
         alert(convertNoeuds());
     }
+    // added start convert in the function so that you have a loop back to the beginning??
+    startConvert();
 
 }
 
 //créer un loop
-while (start == "Oui"){
-    
-    
 
-
-start == "Non";
+while (startConvert()){
+    
+    console.log(quelleConvert());
+    
 }
