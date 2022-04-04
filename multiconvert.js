@@ -3,21 +3,21 @@
 function convertPieds(pieds){
     var pieds= prompt("Entrez une valeur en pieds: ");
     var result = Number(pieds)/ 3.28 ;
-    return result;
+    return Math.floor(result);
     
 }
 
 function convertMiles(miles){
     var miles= prompt("Entrez une valeur en miles: ");
     var result= Number(miles) * 1.6 ;
-    return result;
+    return Math.floor(result);
     
 }
 
 function convertNoeuds(noeuds){
     var noeuds= prompt("Entrez une valeur en noeuds: ");
     var result = Number(noeuds) * 1.852 ;
-    return result;
+    return Math.floor(result);
        
 }
 // créer un fonction pour démarrer
@@ -38,18 +38,19 @@ function quelleConvert(quelConvert){
     var result = 0
     if (quelConvert == "p/m"){
         // ça ne marche pas non plus..
-        alert(message += convertPieds().toString);
+        alert(message += convertPieds().toString());
         
     }
     else if (quelConvert == "m/km"){
-        alert(convertMiles());
-        var message = "Le résultat est " + result.toString;
-        console.log(message);
+        
+        result = convertMiles();
+        var message = "Le résultat est " + result.toString();
+        alert(message);
     }
     else if (quelConvert== "n/kmh"){
-        alert(convertNoeuds());
-        var message = "Le résultat est " + result.toString;
-        console.log(message);
+        result= convertNoeuds();
+        var message = "Le résultat est " + result.toString();
+        alert(message);
     }
     else {
         alert("Cette conversion est impossible.");
@@ -63,7 +64,6 @@ function quelleConvert(quelConvert){
 //créer un loop
 
 while (startConvert()){
-    
-    console.log(quelleConvert());
+    quelleConvert();
     
 }
